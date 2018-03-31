@@ -147,16 +147,10 @@ $maxWidth: 1110px;
         float: left;
       }
 
-      .image {
-        width: 90px;
-        height: 90px;
+      .icon {
         margin-left:20px;
         margin-top: 20px;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
+        font-size: 50px;
       }
       .content {
         width: calc(100% - 140px);
@@ -165,6 +159,10 @@ $maxWidth: 1110px;
         padding-top: 10px;
         h3 {
           line-height: 10px;
+          color: rgba(48, 25, 122, 1.00);
+        }
+        p.mark {
+          color: rgba(79, 137, 239, 1.00);
         }
       }
     }
@@ -237,6 +235,10 @@ $maxWidth: 1110px;
           padding-right: 20px;
           margin-right: 0;
           width: 100%;
+
+          &:first-child {
+            margin-right: 0;
+          }
         }
 
         .image {
@@ -260,6 +262,8 @@ $maxWidth: 1110px;
 
         .content {
           display: inline-block;
+          padding-top: 20px;
+          padding-bottom: 20px;
           margin-top: 20px;
           border-top: 1px solid rgba(50, 16, 126, 1.00);
           border-bottom: 1px solid rgba(50, 16, 126, 1.00);
@@ -271,10 +275,21 @@ $maxWidth: 1110px;
           }
           color: #565a5f;
 
-          ul li {
+          span {
+            display: block;
             text-align: left;
             line-height: 25px;
+
+            &:before {
+              display: inline-block;
+              width: 8px;
+              font-size: 20px;
+              content: '·';
+              color: rgba(79, 137, 239, 1.00);
+            }
           }
+
+
         }
       }
     }
@@ -282,20 +297,24 @@ $maxWidth: 1110px;
 
   .more {
     display: inline-block;
+    width: 100%;
     text-align: center;
-    text-decoration: none;
-    width: 152px;
-    height: 40px;
-    margin: 50px 100px 50px 100px;
-    line-height: 40px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: rgba(69, 136, 247, 1.00);
-    color: white;
-    @include border-radius(20px);
 
-    @include range-width(0, 725px) {
-      margin: 50px 0 50px 0;
+    a {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      width: 152px;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: rgba(69, 136, 247, 1.00);
+      color: white;
+      @include border-radius(20px);
     }
+
   }
 }
