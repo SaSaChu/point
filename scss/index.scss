@@ -1,0 +1,301 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+
+$maxWidth: 1110px;
+.header_banner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 440px;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .banner {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 440px;
+    line-height: 20px;
+    padding-top: calc( 220px - 74px );
+    padding-left: 15%;
+    text-align: left;
+    background-color: rgba(87, 63, 139, 0.69);
+    color: white;
+
+    @include range-width(0, 725px) {
+      padding-left: 5%;
+      text-align: left;
+    };
+
+    span {
+      display: block;
+      font-size: 20px;
+    }
+    a {
+      display: inline-block;
+      width: 146px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+      font-size: 20px;
+      color: white;
+      background-color: rgba(70, 168, 207, 1.00);
+      cursor: pointer;
+      @include border-radius(5px);
+    }
+
+    @include range-width(0, 725px) {
+      h1 {
+        font-size: 25px;
+      }
+      span {
+        font-size: 16px;
+      }
+      a {
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+      }
+    };
+  }
+}
+
+.about {
+  display: inline-block;
+  width: 100%;
+  max-width: $maxWidth;
+  padding-top: 20px;
+
+  @include range-width(0, 750px) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about_title {
+    h2 {
+      color: rgba(47, 15, 124, 1.00);
+      line-height: 10px;
+    }
+    p {
+      line-height: 0;
+
+      @include range-width(0, 750px) {
+        line-height: 20px;
+      }
+    }
+    span {
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      background-color: rgba(174, 56, 137, 1.00);
+    }
+  }
+  .about_content {
+    display: inline-block;
+    width: 100%;
+    padding-top: 30px;
+    @include clearfix();
+
+    > * {
+      display: inline-block;
+      float: left;
+    }
+    .box {
+      width: 50%;
+      height: 185px;
+      border-top: 2px solid rgba(230, 231, 232, 1.00);
+
+      &:nth-child(1), &:nth-child(2) {
+        border-top: 0;
+      }
+      &:nth-child(2n + 1) {
+        border-right: 2px solid rgba(230, 231, 232, 1.00);
+      }
+
+      @include range-width(0, 750px) {
+        width: 100%;
+        height: auto;
+        &:nth-child(2) {
+          border-top: 2px solid rgba(230, 231, 232, 1.00);
+        }
+        &:nth-child(2n + 1) {
+          border-right: 0;
+        }
+      }
+      @include clearfix();
+
+      > * {
+        display: inline-block;
+        float: left;
+      }
+
+      .image {
+        width: 90px;
+        height: 90px;
+        margin-left:20px;
+        margin-top: 20px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content {
+        width: calc(100% - 140px);
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 10px;
+        h3 {
+          line-height: 10px;
+        }
+      }
+    }
+  }
+
+  .more {
+    display: inline-block;
+    text-decoration: none;
+    width: 152px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(55, 16, 127, 1.00);
+    color: white;
+    @include border-radius(20px);
+  }
+}
+
+.course {
+  display: inline-block;
+  width: 100%;
+  padding-top: 40px;
+  background-color: rgba(247, 248, 249, 1.00);
+  text-align: center;
+
+  .center {
+    display: inline-block;
+    width: 100%;
+    max-width: $maxWidth;
+
+    @include range-width(0, 750px) {
+      width: 100%;
+    }
+    .course_title {
+      padding-bottom: 40px;
+      h2 {
+        color: rgba(47, 15, 124, 1.00);
+        line-height: 0;
+      }
+      p {
+        font-size: 20px;
+        line-height: 0;
+      }
+      span {
+        display: inline-block;
+        width: 50px;
+        height: 3px;
+        background-color: rgba(174, 56, 137, 1.00);
+      }
+    }
+    .course_content {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+
+      .box {
+        display: inline-block;
+        width: 350px;
+        height: 430px;
+        text-align: center;
+
+        &:first-child {
+          margin-right: 40px;
+        }
+        @include range-width(0, 750px) {
+          padding-left: 20px;
+          padding-right: 20px;
+          margin-right: 0;
+          width: 100%;
+        }
+
+        .image {
+          display: inline-block;
+          width: 170px;
+          height: 170px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            @include border-radius(50%);
+          }
+        }
+        > span {
+          display: block;
+          font-size: 20px;
+          font-weight: bold;
+          color: #6f6a6a;
+          margin-top: 20px;
+        }
+
+        .content {
+          display: inline-block;
+          margin-top: 20px;
+          border-top: 1px solid rgba(50, 16, 126, 1.00);
+          border-bottom: 1px solid rgba(50, 16, 126, 1.00);
+          width: 100%;
+          height: 166px;
+
+          @include range-width(0, 750px) {
+            height: auto;
+          }
+          color: #565a5f;
+
+          ul li {
+            text-align: left;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .more {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 152px;
+    height: 40px;
+    margin: 50px 100px 50px 100px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(69, 136, 247, 1.00);
+    color: white;
+    @include border-radius(20px);
+
+    @include range-width(0, 725px) {
+      margin: 50px 0 50px 0;
+    }
+  }
+}

@@ -38,6 +38,6 @@ $(function () {
   $('#login-btn').click (function () {
     $('.login_boxs').toggleClass ('show');
   });
-  $('.other .bg, .footer_banner .image, .header_banner').imgLiquid ();
+  $('.other .bg, .footer_banner .image, .header_banner .image').imgLiquid ();
 
 });

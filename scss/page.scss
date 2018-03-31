@@ -14,14 +14,20 @@ $maxWidth: 1110px;
   width: 100%;
   height: 200px;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .title {
+  .image {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title {
+    position: relative;
     height: 200px;
     width: 100%;
     background-color: rgba(87, 63, 139, 0.69);
@@ -68,8 +74,6 @@ $maxWidth: 1110px;
 }
 
 $sideMenu: 280px;
-$pageActiveNum: 1;
-
 .page {
   display: inline-block;
   width: 100%;
@@ -107,17 +111,12 @@ $pageActiveNum: 1;
         color: white;
         background-color: rgba(102, 47, 204, 1.00);
       }
-    }
 
-    $c: 10;
-    @for $i from 1 through $c {
-      // @debug $i;
-      &:has(.active) {
-        @debug $i;
-        $pageActiveNum: $i;
+      &:hover {
+        color: white;
+        background-color: rgba(102, 47, 204, 0.7);
       }
     }
-    @debug $pageActiveNum;
   }
 
   .page_right {
@@ -131,12 +130,6 @@ $pageActiveNum: 1;
     }
 
     .page_detail {
-      display: none;
-
-      &:nth-child( #{$pageActiveNum} ) {
-        display: inline-block;
-      }
-
       h1 {
         font-size: 20px;
         color: rgba(57, 34, 119, 1.00);
@@ -160,274 +153,4 @@ $pageActiveNum: 1;
       }
     }
   }
-}
-
-$otherHeight: 380px;
-.other {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: auto;
-
-  .bg {
-    position: absolute;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: $maxWidth;
-    height: auto;
-    padding: 55px 30px 50px 30px;
-    @include clearfix();
-
-    > * {
-      display: inline-block;
-      @include clearfix();
-    }
-    .title {
-      display: block;
-      text-align: left;
-      font-size: 20px;
-      font-weight: bold;
-      color: rgba(57, 34, 119, 1.00);
-
-      span {
-        display: inline-block;
-        height: 30px;
-        border-bottom: 1px solid rgba(57, 34, 119, 1.00);
-      }
-    }
-
-    .content {
-      display: block;
-      text-align: left;
-      font-size: 15px;
-      @include clearfix();
-
-      .part {
-        width: calc( (#{$maxWidth} - 90px) / 4 );
-        height: auto;
-        float: left;
-        text-align: left;
-        text-decoration: none;
-        color: #2d2d2d;
-        margin-right: 10px;
-        margin-top: 20px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        .image {
-          display: block;
-          height: 80px;
-          width: calc( (#{$maxWidth} - 100px) / 4);
-          overflow: hidden;
-          margin-top: 20px;
-          margin-bottom: 15px;
-          img {
-            width: 100%;
-            heigth: 100%;
-          }
-        }
-        span:nth-child(1) {
-          color: rgba(57, 34, 119, 1.00);
-          font-weight: bold;
-
-          &:after {
-            content: '→';
-            display: inline-block;
-            width: 30px;
-            height: 15px;
-            line-height: 15px;
-            text-align: center;
-            color: rgba(109, 109, 109, 1.00);
-          }
-        }
-
-        @include range-width(0, $maxWidth) {
-          height: auto;
-          width: calc( (100% - 40px) / 2 );
-          margin-right: 40px;
-
-          &:nth-child(2n) {
-            margin-right: 0;
-          }
-
-          .image {
-            width: 100%;
-            height: 100%;
-          }
-        };
-        @include range-width(0,752px) {
-          height: auto;
-          width: 100%;
-          .image {
-            width: 100%;
-            height: 100%;
-          }
-        };
-      }
-    }
-  }
-}
-
-.footer_banner {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-
-  .image {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .hover_img {
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(38, 7, 77, 0.9);
-  }
-  .banner {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: $maxWidth;
-    padding: 50px 70px 50px 70px;
-    z-index: 5;
-    @include clearfix();
-
-    > * {
-      display: inline-block;
-      float: left;
-    }
-    .left_banner {
-      position: relative;
-      width: 30%;
-      text-align: left;
-      color: white;
-
-      @include range-width(0,752px) {
-        width: 100%;
-      };
-
-      div {
-        display: block;
-        width: 100%;
-        border-bottom: 1px solid white;
-        font-size: 15px;
-        font-weight: bold;
-
-        &:first-child {
-          padding-bottom: 20px;
-        }
-        b {
-          font-size: 20px;
-        }
-
-        .image {
-          position: relative;
-          display: inline-block;
-          width: 100px;
-          height: 100px;
-          img {
-            height: 100%;
-            width: 100%;
-          }
-        }
-      }
-      div:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    .right_banner {
-      position: relative;
-      display: inline-block;
-      width: 70%;
-      margin-top: 38px;
-      @include range-width(0,752px) {
-        width: 100%;
-        text-align: left;
-      };
-
-      form {
-        position: relative;
-        display: inline-block;
-        width: 70%;
-        @include clearfix();
-        @include range-width(0,752px) {
-          width: 100%;
-        };
-
-        > * {
-          display: inline-block;
-          width: 100%;
-          float: left;
-          margin-bottom: 15px;
-          background-color: rgba(178, 182, 189, 0.2);
-          border: none;
-          padding-left: 20px;
-          font-size: 14px;
-          color: rgba(130, 113, 154, 1);
-
-          @include border-radius(5px);
-          @include input-placeholder {
-            color: rgba(130, 113, 154, 1);
-          }
-
-        }
-        input[type="text"], input[type="email"] {
-          width: calc(50% - 10px);
-          height: 35px;
-        }
-        input[type="email"] {
-          width: calc(50% - 10px);
-          height: 35px;
-          margin-left: 20px;
-        }
-        input[type="submit"] {
-          height: 35px;
-          background-color: white;
-          color: rgba(74, 40, 141, 1.00);
-          font-weight: bold;
-          cursor: pointer;
-        }
-        select {
-          height: 35px;
-          text-indent: 10px;
-        }
-        textArea {
-          height: 100px;
-          padding-top: 10px;
-          resize: none;
-        }
-
-      }
-    }
-  }
-
 }
