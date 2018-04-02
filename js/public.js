@@ -23,6 +23,15 @@ $(function () {
       $(this).toggleClass ('s');
     });
   });
+  $('#header_banner').each (function () {
+    var $that = $(this).attr ('data-i', 1);
+    var l = $that.find ('>.header_banner').length;
+
+    setInterval (function () {
+      var i = parseInt ($that.attr ('data-i'), 10);
+      $that.attr ('data-i', ++i > l ? 1 : i);
+    }, 6500);
+  });
 
   $('.login_boxs .icon-x').click (function () {
     $('.login_boxs').toggleClass ('show');
