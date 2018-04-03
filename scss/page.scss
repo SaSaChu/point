@@ -30,7 +30,7 @@ $maxWidth: 1110px;
     position: relative;
     height: 200px;
     width: 100%;
-    background-color: rgba(87, 63, 139, 0.69);
+    // background-color: rgba(87, 63, 139, 0.69);
 
     span {
       color: white;
@@ -51,13 +51,17 @@ $maxWidth: 1110px;
     padding: 0 10px 0 10px;
     @include clearfix();
     @include range-width(0, 725px) {
-      padding-left: 20px;
+      padding-left: 10px;
     }
     > a {
       line-height: 50px;
       color: rgba(88, 88, 88, 1.00);
       text-decoration: none;
       float: left;
+
+      @include range-width(0, 750px) {
+        font-size: 13px;
+      }
 
       &:after {
         content: '>';

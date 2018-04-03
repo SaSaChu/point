@@ -58,7 +58,7 @@ $maxWidth: 1110px;
     padding-top: calc( 220px - 74px );
     padding-left: 15%;
     text-align: left;
-    background-color: rgba(87, 63, 139, 0.69);
+    // background-color: rgba(87, 63, 139, 0.69);
     color: white;
 
     @include range-width(0, 725px) {
