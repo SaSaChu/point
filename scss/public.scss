@@ -122,6 +122,7 @@ header {
 
         @include range-width(0, 730px) {
           float: none;
+          padding: 0;
         }
 
         img {
