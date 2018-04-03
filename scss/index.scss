@@ -119,10 +119,13 @@ $maxWidth: 1110px;
       line-height: 10px;
     }
     p {
+      margin: 0;
       line-height: 0;
+      padding-top: 10px;
 
       @include range-width(0, 750px) {
         line-height: 20px;
+        padding-top: 0;
       }
     }
     span {
@@ -175,12 +178,20 @@ $maxWidth: 1110px;
         margin-left:20px;
         margin-top: 20px;
         font-size: 50px;
+
+        @include range-width(0, 750px) {
+          margin-left: 0;
+        }
       }
       .content {
         width: calc(100% - 140px);
         text-align: left;
         padding-left: 20px;
         padding-top: 10px;
+
+        @include range-width(0, 750px) {
+          width: calc(100% - 65px);
+        }
         h3 {
           line-height: 10px;
           color: rgba(48, 25, 122, 1.00);
@@ -228,6 +239,7 @@ $maxWidth: 1110px;
       h2 {
         color: rgba(47, 15, 124, 1.00);
         line-height: 0;
+        margin-top: 10px;
       }
       p {
         font-size: 20px;

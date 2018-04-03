@@ -154,7 +154,7 @@ $maxWidth: 1110px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(38, 7, 77, 0.9);
+    // background-color: rgba(38, 7, 77, 0.9);
   }
   .banner {
     position: relative;
@@ -238,12 +238,11 @@ $maxWidth: 1110px;
           padding-left: 20px;
           font-size: 14px;
           color: rgba(130, 113, 154, 1);
-
           @include border-radius(5px);
+          @include transition(all .3s);
           @include input-placeholder {
             color: rgba(130, 113, 154, 1);
           }
-
         }
         input[type="text"], input[type="email"] {
           width: calc(50% - 10px);
@@ -260,6 +259,11 @@ $maxWidth: 1110px;
           color: rgba(74, 40, 141, 1.00);
           font-weight: bold;
           cursor: pointer;
+
+           &:hover, &:active {
+            background-color: rgba(49, 127, 255, 1.00);
+            color: white;
+          }
         }
         select {
           height: 35px;
