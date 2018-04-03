@@ -208,6 +208,7 @@ header {
             line-height: normal;
             background-color: white;
             border: 1px solid rgba(235, 235, 235, 1.00);
+            border-top: 1px solid rgba(213, 213, 213, 1.00);
             border-left: 0;
 
             > * {
@@ -221,12 +222,15 @@ header {
               text-decoration: none;
               text-align: left;
               padding-left: 8px;
+              border-left: 1px solid rgba(213, 213, 213, 1.00);
 
               + * {
                 border-top: 1px solid rgba(229, 229, 229, 1.00);
               }
               &:hover, &.active {
                 background-color: rgba(237, 237, 237, 1.00);
+                border-left: 0;
+                padding-left: 9px;
                 &:before {
                   content: '';
                   position: absolute;
@@ -239,6 +243,34 @@ header {
                 }
               }
             }
+          }
+        }
+        > div.right {
+          .login {
+            color: rgba(69, 20, 130, 1.00);
+            
+            &:hover, &:active {
+              text-decoration: underline;
+            }
+
+            &:before {
+              display: inline-block;
+              content: '\e900';
+              font-family: "icomoon";
+              margin-right: 10px;
+              font-size: 22px;
+            }
+
+            &.nolo {
+              cursor: auto;
+              text-decoration: none;
+            }
+
+          }
+
+          > div {
+            left: auto;
+            right: 0;
           }
         }
       }

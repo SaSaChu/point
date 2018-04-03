@@ -12,6 +12,7 @@ $maxWidth: 1110px;
   position: relative;
   display: inline-block;
   width: 100%;
+  overflow: hidden;
   > * {
     position: absolute;
     left: 0;
