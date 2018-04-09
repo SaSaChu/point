@@ -37,6 +37,10 @@ $maxWidth: 1110px;
     padding: 55px 20px 50px 20px;
     @include clearfix();
 
+    @include range-width(0, 725px) {
+      padding: 10px;
+    }
+
     > * {
       display: inline-block;
       @include clearfix();
@@ -164,6 +168,10 @@ $maxWidth: 1110px;
     padding: 50px 70px 50px 70px;
     z-index: 5;
     @include clearfix();
+
+    @include range-width(0, 725px) {
+      padding: 10px;
+    }
 
     > * {
       display: inline-block;
