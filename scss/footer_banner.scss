@@ -179,9 +179,13 @@ $maxWidth: 1110px;
     }
     .left_banner {
       position: relative;
-      width: 30%;
+      width: 35%;
       text-align: left;
       color: white;
+
+      &.d50 {
+        width: 100%;
+      }
 
       @include range-width(0,752px) {
         width: 100%;
@@ -193,6 +197,7 @@ $maxWidth: 1110px;
         border-bottom: 1px solid white;
         font-size: 15px;
         font-weight: bold;
+        @include clearfix();
 
         &:first-child {
           padding-bottom: 20px;
@@ -201,14 +206,83 @@ $maxWidth: 1110px;
           font-size: 20px;
         }
 
+        &.d51 {
+
+        }
+
         .image {
           position: relative;
           display: inline-block;
-          width: 100px;
-          height: 100px;
+          width: 100%;
+          @include clearfix();
+
           img {
-            height: 100%;
+            display: inline-block;
             width: 100%;
+            max-width: 100px;
+            float: left;
+          }
+
+          p {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            color: white;
+            width: calc(100% - 100px);
+            float: left;
+          }
+        }
+
+        .qrboxs {
+          display: inline-block;
+          width: 100%;
+
+          img {
+            display: inline-block;
+            width: 100%;
+            max-width: 100px;
+            float: left;
+            margin-bottom: 10px;
+          }
+
+          p {
+            display: inline-block;
+            padding: 0;
+            margin: 0 0 0 15px;
+            color: white;
+            width: calc(100% - 100px - 15px);
+            float: left;
+          }
+        }
+
+        .alink {
+          display: inline-block;
+          width: 100%;
+          float: left;
+
+          a {
+            display: inline-block;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+            @include transition(all .3s);
+            padding-top: 10px;
+            
+            &:hover, &:active {
+              text-decoration: underline;
+            }
+
+            &:after {
+              display: inline-block;
+              content: '│';
+            }
+
+            &:last-child {
+              &:after {
+                display: none;
+              }
+            }
           }
         }
       }
@@ -220,7 +294,7 @@ $maxWidth: 1110px;
     .right_banner {
       position: relative;
       display: inline-block;
-      width: 70%;
+      width: 65%;
       margin-top: 38px;
       @include range-width(0,752px) {
         width: 100%;
@@ -230,7 +304,8 @@ $maxWidth: 1110px;
       form {
         position: relative;
         display: inline-block;
-        width: 70%;
+        width: 90%;
+        float: right;
         @include clearfix();
         @include range-width(0,752px) {
           width: 100%;
@@ -278,7 +353,7 @@ $maxWidth: 1110px;
           text-indent: 10px;
         }
         textArea {
-          height: 100px;
+          height: 130px;
           padding-top: 10px;
           resize: none;
         }
@@ -287,4 +362,13 @@ $maxWidth: 1110px;
     }
   }
 
+}
+
+.ar_ty {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(19, 0, 28, .9);
+  font-size: 14px;
+  color: white;
+  padding: 10px 0;
 }
