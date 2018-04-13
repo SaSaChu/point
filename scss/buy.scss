@@ -378,6 +378,11 @@
         @include range-width(750px) {
           width: 50%;
 
+          &.t100 {
+            width: 100%;
+            padding-right: 12px;
+          }
+
           &:nth-child(2n + 1) {
             padding-right: 12px;
           }
@@ -391,7 +396,6 @@
         input, select {
           @include input(rgba(52, 61, 162, 1.00));
         }
-
       }
     }
     .pay {
