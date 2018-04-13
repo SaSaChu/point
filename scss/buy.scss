@@ -106,14 +106,21 @@
         + * {
           margin-left: 16px;
         }
+
         @include transition(color .3s, background-color .3s);
         
         &.active, &:hover {
           background-color: rgba(66, 14, 131, 1.00);
+
+          div {
+            border-bottom: 1px solid white;
+          }
+
           &, > * {
             color: white;
           }
         }
+
         b {
           display: inline-block;
           width: 100%;
@@ -123,32 +130,93 @@
           color: rgba(0, 0, 0, 1.00);
           @include overflow-docx3();
         }
+
         div {
           display: inline-block;
           width: 100%;
           font-size: 14px;
           overflow: hidden;
           line-height: 21px;
-          height: 21px * 3;
+          height: 25px * 3;
           margin-top: 6px;
           color: rgba(71, 71, 71, 1.00);
+          border-bottom: 1px solid black;
+          // padding-bottom: 10px;
+
+          i {
+            display: inline-block;
+            width: 100%;;
+            font-style: normal;
+            font-weight: 600;
+            color: red;
+            padding-top: 5px;
+          }
         }
+
+        // .pric {
+        //   display: inline-block;
+        //   width: 100%;
+        //   border-top: 1px solid white;
+
+        //   span {
+        //     display: inline-block;
+        //     width: 100%;
+        //     font-size: 18px;
+        //     font-weight: 600;
+        //     margin-top: 8px;
+        //     color: rgba(82, 82, 82, 1.00);
+        //     text-decoration:line-through;
+
+        //     &:hover {
+        //       color: white !important;
+        //     }
+
+        //     &.spa {
+        //       display: inline-block;
+        //       color: red;
+        //       text-decoration: none;
+        //     }
+
+        //     &:before {
+        //       content: '$';
+        //       font-size: 19px;
+        //       margin-right: 5px;
+        //     }
+        //     &:after {
+        //       content: '元';
+        //       display: inline-block;
+        //       margin-top: 4px;
+        //       font-size: 14px;
+        //       margin-left: 3px;
+        //     }
+        //   }
+        // }
         span {
           display: inline-block;
-          width: 100%;
-          font-size: 22px;
+          // width: 100%;
+          font-size: 18px;
+          font-weight: 600;
           margin-top: 8px;
           color: rgba(82, 82, 82, 1.00);
+          text-decoration:line-through;
+
+          &.spa {
+            display: inline-block;
+            color: red;
+            text-decoration: none;
+          }
 
           &:before {
             content: '$';
-            font-size: 20px;
+            font-size: 19px;
+            margin-right: 5px;
           }
           &:after {
             content: '元';
             display: inline-block;
             margin-top: 4px;
             font-size: 14px;
+            margin-left: 3px;
           }
         }
       }
@@ -231,14 +299,33 @@
         > * {
           float: left;
           display: inline-block;
-          width: 50%;
+          width: calc(100% / 3);
           font-size: 18px;
           text-align: left;
           color: rgba(80, 80, 80, 1.00);
 
-          + * {
+          &:last-child {
             text-align: right;
             color: rgba(0, 0, 0, 1.00);
+          }
+
+          select {
+            display: inline-block;
+            width: 200px;
+            height: 25px;
+            line-height: 27px;
+            border: 1px solid #c8c8c8;
+            font-size: 16px;
+            padding: 4px;
+            margin: 5px 0;
+            color: #787878;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -moz-transition: box-shadow .3s,border-color .3s;
+            -o-transition: box-shadow .3s,border-color .3s;
+            -webkit-transition: box-shadow .3s,border-color .3s;
+            transition: box-shadow .3s,border-color .3s;
           }
         }
       }
@@ -391,6 +478,7 @@
               @include border-radius(3px);
               padding: 5px;
             }
+
             &:before {
               position: absolute;
               top: -15px;
