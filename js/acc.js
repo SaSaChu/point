@@ -36,6 +36,7 @@ $(function () {
       } else {
         $that.addClass ('edit');
         $(this).text ('儲存');
+        $(this).addClass ('e_ac');
 
         $that.find ('.data > div').each (function () {
           var $week = $(this);
