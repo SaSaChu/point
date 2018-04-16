@@ -19,8 +19,19 @@ $(function () {
         $that.find ('.data > div').each (function () {
           var $week = $(this);
           var $span = $week.find ('>span');
-          var val = $span.find ('>input').val ();
-          $span.text (val);
+          var $input = $span.find ('>input');
+          if ($input.length) {
+            var val = $input.val ();
+            $span.text (val);
+          } else {
+            var $i = $span.find ('>i');
+            if ($i.length) {
+              $i.each (function () {
+                var v = $(this).find ('>input').val ();
+                $(this).empty ().text (v);
+              });
+            }
+          }
         });
       } else {
         $that.addClass ('edit');
@@ -30,7 +41,21 @@ $(function () {
           var $week = $(this);
           var $span = $week.find ('>span');
           var text = $span.text ();
-          $span.empty ().append ($('<input />').val (text).attr ('name', $week.attr ('class')));
+          var $i = $span.find ('i');
+          
+          if ($i.length) {
+            $i.each (function (i) {
+              var val = $(this).text ();
+              $(this).empty ().append (
+                $('<input />').val (val).attr ('name', $week.attr ('class') + '[' + i + ']')
+              );
+            });
+          } else {
+            $span.empty ().append (
+              $('<input />').val (text).attr ('name', $week.attr ('class'))
+              );
+          }
+
         });
       }
     });

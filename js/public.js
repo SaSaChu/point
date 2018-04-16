@@ -43,6 +43,9 @@ $(function () {
   $('.login_boxs .show-psw').click (function () {
     $('.login_boxs').toggleClass ('show-psw');
   });
+  $('.login_boxs .show-pswed').click (function () {
+    $('.login_boxs').toggleClass ('show-pswed');
+  });
 
   $('.login-btn').click (function () {
     $('.login_boxs').toggleClass ('show');

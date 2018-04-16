@@ -179,6 +179,24 @@
             width: 100%;
             max-width: 100%;
           }
+
+          i {
+            font-style: normal;
+          }
+        }
+        &.phone {
+          span {
+            @include clearfix();
+            i {
+              float: left;
+              display: inline-block;
+              width: 100px;
+              + i {
+                width: calc(100% - 100px - 4px);
+                margin-left: 4px;
+              }
+            }
+          }
         }
       }
     }
