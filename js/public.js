@@ -35,25 +35,33 @@ $(function () {
 
   $('.login_boxs .icon-x').click (function () {
     $('.login_boxs').toggleClass ('show');
-    $("body").toggleClass ('fixbg');
+    // $("body").toggleClass ('fixbg');
   });
 
   $('.login_boxs .show-reg').click (function () {
     $('.login_boxs').toggleClass ('show-reg');
-    $("body").toggleClass ('fixbg');
+    // $("body").toggleClass ('fixbg');
   });
   $('.login_boxs .show-psw').click (function () {
     $('.login_boxs').toggleClass ('show-psw');
-    $("body").toggleClass ('fixbg');
+    // $("body").toggleClass ('fixbg');
   });
   $('.login_boxs .show-pswed').click (function () {
     $('.login_boxs').toggleClass ('show-pswed');
-    $("body").toggleClass ('fixbg');
+    // $("body").toggleClass ('fixbg');
   });
 
   $('.login-btn').click (function () {
     $('.login_boxs').toggleClass ('show');
   });
   $('.other .bg, .footer_banner .image, .header_banner .image').imgLiquid ();
+
+
+  // $(".login_boxs").on("show", function () {
+  //    $("body").addClass("fixbg");
+  //   }).on("icon-x", function () {
+  //    $("body").removeClass("fixbg");
+  // });
+
 
 });
