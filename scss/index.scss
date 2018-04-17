@@ -62,8 +62,10 @@ $maxWidth: 1110px;
     color: white;
 
     @include range-width(0, 725px) {
-      padding-left: 5%;
+      width: 100%;
+      padding: 50px 10px 30px 10px;
       text-align: left;
+      line-height: 30px;
     };
 
     span {
