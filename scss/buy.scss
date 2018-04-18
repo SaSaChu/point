@@ -107,6 +107,30 @@
           margin-left: 16px;
         }
 
+        &.noac {
+          cursor: auto;
+          font-style: normal;
+          &.active, &:hover {
+            background-color: white;
+
+            div {
+              border-bottom: 1px solid black;
+            }
+
+            &, > * {
+              color: black;
+            }
+          }
+
+          span {
+            &.spa {
+              display: inline-block;
+              color: red;
+              text-decoration: none;
+            }
+          }
+        }
+
         @include transition(color .3s, background-color .3s);
         
         &.active, &:hover {
@@ -220,6 +244,7 @@
           }
         }
       }
+
       @include range-width(0, 1000px) {
         -webkit-overflow-scrolling: touch;
         flex-wrap: nowrap;
@@ -274,7 +299,7 @@
       width: 100%;
       text-align: left;
 
-      >* {
+      > * {
         text-align: right;
         display: inline-block;
         width: 100%;
@@ -282,6 +307,7 @@
         line-height: 40px;
         padding-left: 30px;
         padding-right: 30px;
+
         b {
           color: rgba(66, 14, 131, 1.00);
         }
@@ -296,6 +322,10 @@
         border-bottom: 1px solid rgba(208, 208, 208, 1.00);
         @include clearfix();
 
+        @include range-width(0, 600px) {
+          height: auto;
+        }
+
         > * {
           float: left;
           display: inline-block;
@@ -303,6 +333,13 @@
           font-size: 18px;
           text-align: left;
           color: rgba(80, 80, 80, 1.00);
+
+          @include range-width(0, 600px) {
+            &:first-child {
+              width: 100%;
+            }
+            width: 50%;
+          }
 
           &:last-child {
             text-align: right;
@@ -393,7 +430,16 @@
             margin-top: 8px;
           }
         };
+
         input, select {
+          &.b30 {
+            width: 17%;
+          }
+
+          &.b70 {
+            width: calc(36% - 10px);
+            float: right;
+          }
           @include input(rgba(52, 61, 162, 1.00));
         }
       }
