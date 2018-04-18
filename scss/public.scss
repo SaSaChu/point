@@ -532,6 +532,10 @@ header {
   .login_box {
     display: none;
     width: 100%;
+    max-height: calc(100% - 10px * 2);
+    overflow-y: scroll;
+
+
     max-width: 590px;
     background-color: white;
     padding: 25px 50px;

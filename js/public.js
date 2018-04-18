@@ -34,10 +34,19 @@ $(function () {
   });
 
   $('.login_boxs .icon-x').click (function () {
-    $('.login_boxs').toggleClass ('show');
-    // $("body").toggleClass ('fixbg');
+    if ($('.login_boxs').toggleClass ('show').hasClass ('show'))
+      $("body").css({"overflow": "hidden"});
+    else
+      $("body").css({"overflow": "auto"});
   });
 
+  $('.login-btn').click (function () {
+    if ($('.login_boxs').toggleClass ('show').hasClass ('show'))
+      $("body").css({"overflow": "hidden"});
+    else
+      $("body").css({"overflow": "auto"});
+  });
+  
   $('.login_boxs .show-reg').click (function () {
     $('.login_boxs').toggleClass ('show-reg');
     // $("body").toggleClass ('fixbg');
@@ -51,9 +60,6 @@ $(function () {
     // $("body").toggleClass ('fixbg');
   });
 
-  $('.login-btn').click (function () {
-    $('.login_boxs').toggleClass ('show');
-  });
   $('.other .bg, .footer_banner .image, .header_banner .image').imgLiquid ();
 
 
