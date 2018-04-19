@@ -242,7 +242,7 @@
           padding-right: 4px;
           float: left;
 
-          input {
+          input, select {
             @include input;
             width: 95%;
             max-width: 95%;

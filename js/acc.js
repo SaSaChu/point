@@ -52,9 +52,15 @@ $(function () {
               );
             });
           } else {
+            if ($span.hasClass ('select'))
+              $span.empty ().append (
+                  $('<select />').append ($('<option />').text (text)).attr ('name', $week.attr ('class'))
+                );
+            else
             $span.empty ().append (
               $('<input />').val (text).attr ('name', $week.attr ('class'))
               );
+
           }
 
         });
