@@ -157,12 +157,17 @@ header {
           color: rgba(45, 45, 45, 1.00);
           @include transition(all .3s);
 
-          @include range-width(855px, 975px) {
+          @include range-width(955px, 1066px) {
             margin-left: 40px;
           }
 
-          @include range-width(730px, 855px) {
-            margin-left: 30px;
+          @include range-width(820px, 955px) {
+            margin-left: 20px;
+          }
+
+          @include range-width(730px, 820px) {
+            font-size: 15px;
+            margin-left: 10px;
           }
           
           &:hover, &:active {
