@@ -158,3 +158,21 @@ $sideMenu: 280px;
     }
   }
 }
+
+
+.ok {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  padding: 5px 20px;
+  cursor: pointer;
+  @include border-radius(2px);
+  background-color: rgba(91, 42, 197, 1.00);
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:hover, &:active {
+    background-color: rgba(91, 42, 197, .9);
+  }
+}
