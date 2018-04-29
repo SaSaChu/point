@@ -17,6 +17,10 @@ $(function () {
     });
   });
 
+  $('label.m_login').click (function () {
+    $(this).toggleClass ('s');
+  });
+
   $('#r_menu_boxs').each (function () {
     var $that = $(this);
     $that.find ('span').click (function () {
