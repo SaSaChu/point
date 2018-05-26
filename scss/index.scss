@@ -356,3 +356,87 @@ $maxWidth: 1110px;
 
   }
 }
+
+
+.nnew {
+  display: inline-block;
+  width: 100%;
+  
+  > div {
+    display: inline-block;
+    max-width: 1110px;
+    width: 100%;
+    padding: 70px 0;
+    @include range-width(0, 1110px) {
+      width: calc(100% - 16px * 2);
+      margin: 0 16px;
+    };
+    
+
+    @include clearfix();
+    > * {
+      float: left;
+      display: inline-block;
+      width: 50%;
+      @include range-width(0, 700px) {
+        width: 100%;
+      };
+      &:nth-child(1) {
+        text-align: left;
+        @include range-width(700px) {
+          padding-right: 32px;
+        }
+
+        >div {
+          color: rgba(94, 95, 96, 1.00);
+          padding-left: 32px;
+          position: relative;
+          &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            color: #68696a;
+            font-size: 20px;
+            margin-right: 4px;
+          }
+          &:nth-child(1) {
+            color: rgba(58, 1, 138, 1.00);
+            font-size: 24px;
+            height: 32px;
+            line-height: 32px;
+          }
+          &:nth-child(2) {
+            font-size: 16px;
+            height: 24px;
+            margin-top: 2px;
+            line-height: 24px;
+          }
+          &:nth-child(3) {
+            font-size: 14px;
+            margin-top: 22px;
+            color: rgba(111, 111, 111, 1.00);
+          }
+          &:nth-child(4) {
+            font-size: 14px;
+            margin-top: 32px;
+            color: rgba(111, 111, 111, 1.00);
+          }
+        }
+      }
+      &:nth-child(2) {
+        @include range-width(0, 700px) {
+          margin-top: 32px;
+        }
+        @include range-width(700px) {
+          padding-left: 32px;
+        }
+        iframe {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

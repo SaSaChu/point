@@ -6,6 +6,24 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-calendar2:before {
+  content: "\e91d";
+}
+.icon-clock3:before {
+  content: "\e91e";
+}
+.icon-medal-01:before {
+  content: "\e919";
+}
+.icon-pay:before {
+  content: "\e91a";
+}
+.icon-headphones:before {
+  content: "\e91b";
+}
+.icon-trophy-01:before {
+  content: "\e91c";
+}
 .icon-user:before {
   content: "\e900";
 }
@@ -21,11 +39,20 @@
 .icon-user2:before {
   content: "\e904";
 }
+.icon-align-justify:before {
+  content: "\e90d";
+}
+.icon-book:before {
+  content: "\e90e";
+}
 .icon-check-circle:before {
   content: "\e905";
 }
-.icon-clock2:before {
-  content: "\e906";
+.icon-check:before {
+  content: "\e918";
+}
+.icon-chevron-down:before {
+  content: "\e90a";
 }
 .icon-chevron-left:before {
   content: "\e907";
@@ -36,38 +63,41 @@
 .icon-chevron-up:before {
   content: "\e909";
 }
-.icon-chevron-down:before {
-  content: "\e90a";
-}
-.icon-minus:before {
-  content: "\e90b";
-}
-.icon-plus:before {
-  content: "\e90c";
-}
-.icon-align-justify:before {
-  content: "\e90d";
-}
-.icon-book:before {
-  content: "\e90e";
-}
-.icon-cart:before {
-  content: "\e90f";
-}
-.icon-x:before {
-  content: "\e910";
+.icon-clock2:before {
+  content: "\e906";
 }
 .icon-mail:before {
   content: "\e911";
 }
+.icon-minus-circle:before {
+  content: "\e91f";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
 .icon-phone:before {
   content: "\e912";
+}
+.icon-plus-circle:before {
+  content: "\e920";
+}
+.icon-plus:before {
+  content: "\e90c";
 }
 .icon-user3:before {
   content: "\e913";
 }
+.icon-x:before {
+  content: "\e910";
+}
 .icon-calendar:before {
   content: "\e914";
+}
+.icon-tag:before {
+  content: "\e917";
+}
+.icon-cart:before {
+  content: "\e90f";
 }
 .icon-home:before {
   content: "\e915";
@@ -75,27 +105,15 @@
 .icon-pencil:before {
   content: "\e916";
 }
-.icon-tag:before {
-  content: "\e917";
-}
-.icon-check:before {
-  content: "\e918";
-}
-.icon-medal-01:before {
-  content: "\e919";
-}
-.icon-pay:before {
-  content: "\e91a";
-}
-.icon-headphones:before {
-  content: "\e91b";
-}
-.icon-trophy-01:before {
-  content: "\e91c";
-}
-.icon-arrow-thin-right:before {
-  content: "\e219";
-}
 .icon-coin-dollar:before {
   content: "\e93b";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-video-camera:before {
+  content: "\e921";
 }
