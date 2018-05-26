@@ -366,6 +366,11 @@
           color: rgba(124, 31, 216, 1.00);
           padding: 0 16px;
           margin-top: 16px;
+          &:not(.b_black) {
+            height: 22px;
+            line-height: 22px;
+            @include overflow-docx3();
+          }
 
           &.b_black {
             color: black;

@@ -27,6 +27,9 @@ $(function () {
       $(this).toggleClass ('s');
     });
   });
+  $('.xx').click (function () {
+    $(this).toggleClass ('a');
+  });
   $('#header_banner').each (function () {
     var $that = $(this).attr ('data-i', 1);
     var l = $that.find ('>.header_banner').length;
