@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7tj6fl');
-  src:  url('fonts/icomoon.eot?7tj6fl#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7tj6fl') format('truetype'),
-    url('fonts/icomoon.woff?7tj6fl') format('woff'),
-    url('fonts/icomoon.svg?7tj6fl#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3awbtt');
+  src:  url('fonts/icomoon.eot?3awbtt#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3awbtt') format('truetype'),
+    url('fonts/icomoon.woff?3awbtt') format('woff'),
+    url('fonts/icomoon.svg?3awbtt#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -134,4 +134,7 @@
 }
 .icon-video-camera:before {
   content: "\e921";
+}
+.icon-search:before {
+  content: "\e986";
 }

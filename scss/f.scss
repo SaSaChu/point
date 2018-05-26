@@ -12,8 +12,6 @@ body {
 #main {
   display: inline-block;
   width: 100%;
-  // margin-top: 32px;
-  
 
   > div {
     max-width: 1110px;
@@ -46,6 +44,133 @@ body {
           padding-left: 0;
         }
       }
+      &:nth-child(1) {
+        text-align: left;
+        background-color: rgba(255, 255, 255, 1.00);
+        @include range-width(0, 730px) {
+          border-bottom: 1px solid rgba(227, 228, 229, 1.00);
+        }
+
+        > span {
+          display: inline-block;
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          font-weight: bold;
+          border-bottom: 1px solid rgba(213, 213, 213, 1.00);
+
+          > img {
+            width: 25px;
+            margin-top: (60px - 25px) / 2;
+          }
+          &.s {
+            position: relative;
+            background-color: rgba(249, 250, 251, 1.00);
+            + div {
+              background-color: white;
+            }
+
+            &:after {
+              content: '\e986';
+              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+              position: absolute;
+              right: 2px;
+              text-align: center;
+              top: 2px;
+              display: inline-block;
+              width: 32px;
+              height: 32px;
+              color: rgba(205, 206, 207, 1.00);
+            }
+            input {
+              display: inline-block;
+              width: 100%;
+              height: 32px;
+              margin-top: (60px - 32px) / 2;
+              padding-left: 4px;
+              padding-right: 2px + 32px;
+              font-size: 16px;
+              border: 1px solid rgba(214, 215, 216, 1.00);
+              @include border-radius(2px);
+            }
+          }
+        }
+        > div:not(.xqr) {
+          display: inline-block;
+          width: 100%;
+          
+          > span {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 22px;
+            @include range-width(0, 730px) {
+              padding-left: 10px;
+            }
+            color: rgba(0, 0, 0, 1.00);
+            padding-right: 8px + 20px + 8px;
+            @include range-width(730px) {
+              @include border-radius(3px);
+            }
+            cursor: pointer;
+
+            &:after {
+              content: '\e920';
+              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+              position: absolute;
+              right: 8px;
+              top: (36px - 20px) / 2;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+            }
+            &.a {
+              background-color: rgba(63, 2, 132, 1.00);
+              color: white;
+              &:after {
+                content: '\e91f';
+              }
+              + div {
+                display: inline-block;
+              }
+            }
+          }
+          > div {
+            display: none;
+            > span {
+              display: inline-block;
+              width: 100%;
+              height: 36px;
+              line-height: 36px;
+              padding-left: 44px;
+              @include range-width(0, 730px) {
+                padding-left: 22px;
+              }
+              font-size: 16px;
+              > a {
+                display: inline-block;
+                line-height: 20px;
+                height: 20px;
+                margin-top: (36px - 20px) / 2;
+                text-decoration: none;
+                color: rgba(63, 4, 132, 1.00);
+                border-bottom: 1px solid rgba(63, 4, 132, 1.00);
+              }
+
+
+            }
+          }
+        }
+        div.xqr {
+          @include range-width(0, 730px) {
+            display: none;
+          };
+        }
+      }
     
       &:nth-child(2) {
         text-align: left;
@@ -71,6 +196,7 @@ body {
               margin-right: 4px;
               font-weight: normal;
             }
+
             &:nth-child(2) {
               color: rgba(86, 87, 89, 1.00);
               > * {
@@ -88,6 +214,11 @@ body {
               font-weight: bold;
               color: rgba(10, 13, 15, 1.00);
               font-size: 22px;
+              img {
+                width: 20px;
+                margin-top: 18px;
+                margin-right: 4px;
+              }
             }
 
             + * {
@@ -300,101 +431,110 @@ body {
               }
             }
           }
-
         }
-      }
-      &:nth-child(1) {
-        text-align: left;
-        background-color: rgba(255, 255, 255, 1.00);
-        @include range-width(0, 730px) {
-          border-bottom: 1px solid rgba(227, 228, 229, 1.00);
-        }
-
-        > span {
+        >div.c {
           display: inline-block;
           width: 100%;
-          height: 60px;
-          line-height: 60px;
-          font-weight: bold;
-          border-bottom: 1px solid rgba(213, 213, 213, 1.00);
-
-          > img {
-            width: 25px;
-            margin-top: (60px - 25px) / 2;
-          }
-        }
-        > div {
-          display: inline-block;
-          width: 100%;
+          margin-top: 32px;
           
-          > span {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            height: 36px;
-            line-height: 36px;
-            padding-left: 22px;
-            @include range-width(0, 730px) {
-              padding-left: 10px;
-            }
-            color: rgba(0, 0, 0, 1.00);
-            padding-right: 8px + 20px + 8px;
-            @include range-width(730px) {
-              @include border-radius(3px);
-            }
-            cursor: pointer;
+          text-align: center;
 
-            &:after {
-              content: '\e920';
-              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
-              position: absolute;
-              right: 8px;
-              top: (36px - 20px) / 2;
+          > * {
+            display: inline-block;
+            width: 630px;
+            
+            @include clearfix();
+            
+            > * {
+              float: left;
               display: inline-block;
-              width: 20px;
-              height: 20px;
-              line-height: 20px;
-              text-align: center;
-            }
-            &.a {
-              background-color: rgba(63, 2, 132, 1.00);
-              color: white;
-              &:after {
-                content: '\e91f';
+              &:nth-child(1), &:nth-child(2) {
+                width: calc(50% - 16px / 2);
               }
-              + div {
-                display: inline-block;
+              &:nth-child(2) {
+                margin-left: 16px;
+              }
+              &:nth-child(n + 3) {
+                margin-top: 16px;
+                width: 100%;
               }
             }
-          }
-          > div {
-            display: none;
-            > span {
+            input, select {
+              height: 32px;
+              line-height: 32px;
+              border: 0;
+              outline: 0;
+              padding: 0 8px;
+              @include border-radius(3px);
+              background-color: rgba(241, 242, 243, 1.00);
+
+              @include input-placeholder {
+                font-size: 13px;
+                font-weight: normal;
+                color: rgba(143, 144, 145, 1.00);
+              }
+            }
+            select {
+              color: rgba(143, 144, 145, 1.00);
+            }
+            button {
               display: inline-block;
               width: 100%;
-              height: 36px;
-              line-height: 36px;
-              padding-left: 44px;
-              @include range-width(0, 730px) {
-                padding-left: 22px;
-              }
+              height: 40px;
+              line-height: 40px;
               font-size: 16px;
-              > a {
-                display: inline-block;
-                line-height: 20px;
-                height: 20px;
-                margin-top: (36px - 20px) / 2;
-                text-decoration: none;
-                color: rgba(63, 4, 132, 1.00);
-                border-bottom: 1px solid rgba(63, 4, 132, 1.00);
-              }
+              margin-top: 32px;
+              color: white;
 
-
+              background-color: rgba(87, 24, 140, 1.00);
+              @include border-radius(3px);
             }
           }
+        }
+        div.xqr {
+          @include range-width(730px) {
+            display: none;
+          };
+          span {
+            display: block;
+          }
+          width: calc(100% + 16px * 2);
+          margin-left: -16px;
+          margin-top: 16px;
         }
       }
     }
+  }
+}
 
+div.xqr {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(226, 227, 228, 1.00);
+  color: rgba(94, 95, 97, 1.00);
+  padding: 16px 24px;
+
+  @include clearfix();
+  
+  > * {
+    float: left;
+    display: inline-block;
+  }
+  span {
+    width: 100%;
+  }
+  div {
+    width: calc(50% - 16px / 2);
+    + div {
+      margin-left: 16px;
+    }
+    font-size: 13px;
+    text-align: center;
+    margin-top: 16px;
+
+    img {
+      width: 90px;
+      margin-bottom: 8px
+    }
   }
 }
