@@ -1,0 +1,400 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+body {
+  background-color: rgba(249, 250, 251, 1.00);
+}
+#main {
+  display: inline-block;
+  width: 100%;
+  // margin-top: 32px;
+  
+
+  > div {
+    max-width: 1110px;
+    width: 100%;
+    @include range-width(0, 1110px) {
+      width: calc(100% - 16px * 2);
+      margin: 0 16px;
+    }
+    @include range-width(0, 730px) {
+      width: 100%;
+      margin: 0;
+    }
+    
+    @include clearfix();
+    display: inline-block;
+
+    > * {
+      float: left;
+      display: inline-block;
+      width: 255px;
+      
+      + * {
+        width: calc(100% - 255px);
+        padding-left: 30px;
+      }
+      @include range-width(0, 730px) {
+        width: 100%;
+        + * {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+    
+      &:nth-child(2) {
+        text-align: left;
+        @include range-width(0, 730px) {
+          width: calc(100% - 16px * 2);
+          margin: 0 16px;
+        }
+
+        > span {
+          display: inline-block;
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          @include clearfix();
+          
+          > * {
+            float: left;
+            display: inline-block;
+            width: 50%;
+            
+            &:before {
+              color: rgba(63, 2, 132, 1.00);
+              margin-right: 4px;
+              font-weight: normal;
+            }
+            &:nth-child(2) {
+              color: rgba(86, 87, 89, 1.00);
+              > * {
+                margin-left: 3px;
+              }
+              span {
+                color: rgba(247, 43, 107, 1.00);
+              }
+              i {
+                color: rgba(247, 43, 107, 1.00);
+                font-size: 28px;
+              }
+            }
+            &:nth-child(1) {
+              font-weight: bold;
+              color: rgba(10, 13, 15, 1.00);
+              font-size: 22px;
+            }
+
+            + * {
+              text-align: right;
+            }
+          }
+        }
+        >img {
+          width: 100%;
+        }
+        >div.a {
+          margin-top: 32px;
+          display: inline-block;
+          width: 100%;
+          @include clearfix();
+          
+          > * {
+            float: left;
+            display: inline-block;
+            width: calc(50% - 40px / 2);
+            border: 1px solid rgba(231, 232, 234, 1.00);
+            background-color: rgba(255, 255, 255, 1.00);
+            @include border-radius(3px);
+
+            @include range-width(1000px) {
+              &:nth-child(n + 3) {
+                margin-top: 32px;
+              }
+              &:nth-child(2n + 2) {
+                margin-left: 40px;
+              }
+            }
+            @include range-width(0, 1000px) {
+              margin: 0;
+              width: 100%;
+              + * {
+               margin-top: 32px;
+              }
+            };
+            > div {
+              &:nth-child(1) {
+                display: inline-block;
+                width: 100%;
+                height: 45px;
+                line-height: 45px;
+                padding-left: 22px;
+                padding-right: 22px;
+                border-bottom: 1px solid rgba(231, 232, 233, 1.00);
+                @include clearfix();
+                > * {
+                  float: left;
+                  display: inline-block;
+                }
+                label {
+                  @include checkbox(rgba(63, 2, 132, 1.00));
+                  margin-top: (45px - 20px) / 2 - 1px;
+                }
+              }
+              &:nth-child(2) {
+                display: inline-block;
+                width: 100%;
+                height: 134px;
+                padding: 14px 22px;
+                @include clearfix();
+                
+                > * {
+                  float: left;
+                  display: inline-block;
+                  width: 50%;
+                  + * {
+                    padding-left: 24px;
+                  }
+                  &:nth-child(1) {
+                    height: 134px - 14px * 2;
+                  }
+                  @include range-width(0, 400px) {
+                    width: 100px;
+                    + * {
+                      width: calc(100% - 100px);
+                    }
+                  };
+                  div {
+                    color: rgba(22, 24, 28, 1.00);
+                    display: inline-block;
+                    width: 100%;
+                    height: 32px;
+                    line-height: 32px;
+                    color: rgba(0, 0, 0, 1.00);
+                  }
+                  span {
+                    color: rgba(129, 130, 131, 1.00);
+                    display: inline-block;
+                    width: 100%;
+                    height: 22px;
+                    line-height: 22px;
+                  }
+                  p {
+                    display: inline-block;
+                    margin: 0;
+                    width: 100%;
+                    height: 44px;
+                    line-height: 44px;
+
+                    @include clearfix();
+                    
+                    i {
+                      font-size: 20px;
+                      float: left;
+                      color: rgba(255, 227, 0, 1.00);
+                      + i {
+                        margin-left: 4px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        >div.b {
+          display: inline-block;
+          width: 100%;
+          border: 1px solid rgba(230, 231, 232, 1.00);
+          background-color: white;
+          padding: 12px 20px;
+          margin-top: 32px;
+          margin-bottom: 16px;
+          @include range-width(0, 730px) {
+            width: calc(100% + 16px * 2);
+            margin-left: -16px;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+            margin-bottom: 0;
+          }
+          > * {
+            float: left;
+            display: inline-block;
+          }
+          > span {
+            width: 100%;
+            height: 24px;
+            line-height: 24px;
+            color: rgba(0, 0, 0, 1.00);
+            img {
+              display: inline-block;
+              height: 20px;
+              width: auto;
+              margin-top: 2px;
+              margin-left: 2px;
+            }
+          }
+          > div {
+            width: calc(100% / 3 - 100px / 3);
+            padding: 16px 0;
+            &:nth-child(3) {
+              margin: 0 50px;
+            }
+            b {
+              display: inline-block;
+              width: 100%;
+              position: relative;
+              height: 32px;
+              line-height: 32px;
+              color: rgba(36, 38, 40, 1.00);
+              &:after {
+                content: attr(data-val);
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-weight: normal;
+                color: rgba(106, 107, 109, 1.00);
+                display: inline-block;
+              }
+            }
+            div {
+              display: inline-block;
+              width: 100%;
+              margin-top: 8px;
+              height: 16px;
+              overflow: hidden;
+
+              @include clearfix();
+              @include border-radius(3px);
+              span {
+                float: left;
+                display: inline-block;
+                width: calc(100% / 5);
+                height: 100%;
+                background-color: rgba(229, 230, 231, 1.00);
+                + * {
+                  border-left: 1px solid rgba(206, 207, 208, 1.00);
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              div span.a {
+                background-color: rgba(251, 61, 0, 1.00)
+              }
+            }
+            &:nth-child(3) {
+              div span.a {
+                background-color: rgba(11, 201, 223, 1.00)
+              }
+            }
+            &:nth-child(4) {
+              div span.a {
+                background-color: rgba(20, 218, 133, 1.00)
+              }
+            }
+          }
+
+        }
+      }
+      &:nth-child(1) {
+        text-align: left;
+        background-color: rgba(255, 255, 255, 1.00);
+        @include range-width(0, 730px) {
+          border-bottom: 1px solid rgba(227, 228, 229, 1.00);
+        }
+
+        > span {
+          display: inline-block;
+          width: 100%;
+          height: 60px;
+          line-height: 60px;
+          font-weight: bold;
+          border-bottom: 1px solid rgba(213, 213, 213, 1.00);
+
+          > img {
+            width: 25px;
+            margin-top: (60px - 25px) / 2;
+          }
+        }
+        > div {
+          display: inline-block;
+          width: 100%;
+          
+          > span {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 22px;
+            @include range-width(0, 730px) {
+              padding-left: 10px;
+            }
+            color: rgba(0, 0, 0, 1.00);
+            padding-right: 8px + 20px + 8px;
+            @include range-width(730px) {
+              @include border-radius(3px);
+            }
+            cursor: pointer;
+
+            &:after {
+              content: '\e920';
+              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+              position: absolute;
+              right: 8px;
+              top: (36px - 20px) / 2;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+            }
+            &.a {
+              background-color: rgba(63, 2, 132, 1.00);
+              color: white;
+              &:after {
+                content: '\e91f';
+              }
+              + div {
+                display: inline-block;
+              }
+            }
+          }
+          > div {
+            display: none;
+            > span {
+              display: inline-block;
+              width: 100%;
+              height: 36px;
+              line-height: 36px;
+              padding-left: 44px;
+              @include range-width(0, 730px) {
+                padding-left: 22px;
+              }
+              font-size: 16px;
+              > a {
+                display: inline-block;
+                line-height: 20px;
+                height: 20px;
+                margin-top: (36px - 20px) / 2;
+                text-decoration: none;
+                color: rgba(63, 4, 132, 1.00);
+                border-bottom: 1px solid rgba(63, 4, 132, 1.00);
+              }
+
+
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -67,7 +67,7 @@ $(function () {
     // $("body").toggleClass ('fixbg');
   });
 
-  $('.other .bg, .footer_banner .image, .header_banner .image').imgLiquid ();
+  $('.other .bg, .footer_banner .image, .header_banner .image, ._ic').imgLiquid ();
 
 
   // $(".login_boxs").on("show", function () {
