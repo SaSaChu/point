@@ -742,6 +742,8 @@ header {
       display: none !important;
       &.s_l {
         display: inline-block !important;
+        max-height: calc(100% - 10px * 2);
+        overflow: auto;
       }
     }
   }
