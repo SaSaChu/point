@@ -744,6 +744,9 @@ header {
         display: inline-block !important;
         max-height: calc(100% - 10px * 2);
         overflow: auto;
+        @include range-width(750px) {
+          max-height: calc(100% - 80px * 2);
+        };
       }
     }
   }
