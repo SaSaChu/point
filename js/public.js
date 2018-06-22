@@ -62,6 +62,12 @@ $(function () {
     $('.login_boxs').toggleClass ('show-psw');
     // $("body").toggleClass ('fixbg');
   });
+  $('header .lang_boxs .lang_box>div').click (function () {
+    $(this).toggleClass ('a');
+    console.error ('x');
+    
+  });
+
   $('.login_boxs .show-pswed').click (function () {
     $('.login_boxs').toggleClass ('show-pswed');
     // $("body").toggleClass ('fixbg');

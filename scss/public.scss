@@ -138,7 +138,12 @@ header {
           position: relative;
           z-index: 99999999999;
 
-          &:hover {
+          // &:hover {
+          //   > div {
+          //     display: inline-block;
+          //   }
+          // }
+          &.a {
             > div {
               display: inline-block;
             }
