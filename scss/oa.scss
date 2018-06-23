@@ -437,7 +437,7 @@ body {
                 line-height: 32px;
                 color: rgba(36, 38, 40, 1.00);
                 &:after {
-                  content: attr(data-val);
+                  content: attr(data-val) '%';
                   position: absolute;
                   right: 0;
                   top: 0;
@@ -536,6 +536,24 @@ body {
                   font-weight: normal;
                   color: rgba(143, 144, 145, 1.00);
                 }
+              }
+              textarea {
+                border: 0;
+                resize: none;
+
+                &:focus {
+                  outline: 0;
+                }
+                @include input-placeholder {
+                  font-size: 13px;
+                  font-weight: normal;
+                  color: rgba(143, 144, 145, 1.00);
+                }
+                height: 32px * 6;
+                line-height: 32px;
+                padding: 8px;
+                @include border-radius(3px);
+                background-color: rgba(241, 242, 243, 1.00);
               }
               select {
                 color: rgba(143, 144, 145, 1.00);
@@ -695,11 +713,18 @@ body {
                 width: 100%;
                 margin: 0;
                 color: rgba(99, 100, 101, 1.00);
+                &:not(:first-child) {
+                  margin-top: 8px;
+                }
               }
               > a {
                 display: inline-block;
                 color: rgba(63, 2, 132, 1.00);
                 margin-top: 8px;
+                cursor: pointer;
+                ~ * {
+                  display: none;
+                }
               }
               > span {
                 display: inline-block;

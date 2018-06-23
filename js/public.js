@@ -81,6 +81,21 @@ $(function () {
   //   }).on("icon-x", function () {
   //    $("body").removeClass("fixbg");
   // });
+  $('.more').click (function () {
+    $(this).remove();
+  });
+  $('.pa').each (function () {
+    var j = parseInt(parseInt($(this).data('val'), 10) / 10, 10);
+    var $spans = $(this).next().find('span');
 
+    for(i = 0; i < j; i++)
+      $spans.eq(i).addClass ('a');
+  });
+  $('.stars i').click (function () {
+    if($(this).parent().data('click'))
+      return;
+    $(this).parent().data('click', true);
+    $(this).prevAll().andSelf().attr('class', 'icon-star-full');
+  });
 
 });
