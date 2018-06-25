@@ -452,6 +452,7 @@ body {
                 margin-top: 8px;
                 height: 16px;
                 overflow: hidden;
+                  background-color: rgba(229, 230, 231, 1.00);
 
                 @include clearfix();
                 @include border-radius(3px);
@@ -461,6 +462,7 @@ body {
                   width: calc(100% / 5);
                   height: 100%;
                   background-color: rgba(229, 230, 231, 1.00);
+
                   + * {
                     // border-left: 1px solid rgba(206, 207, 208, 1.00);
                   }
@@ -928,6 +930,14 @@ body {
                     display: inline-block;
                     width: 50%;
                     border: 1px solid rgba(0, 0, 0, 0);
+                    span {
+                      display: inline-block;
+                      color: rgba(61, 4, 132, 1.00);
+                      text-decoration: none;
+                      padding: 0 12px;
+                      height: 36px;
+                      line-height: 36px;
+                    }
 
                     + * {
                       text-align: right;
@@ -1087,6 +1097,9 @@ body {
                         border-top: 1px solid rgba(228, 229, 230, 1.00);
                         height: 30px;
                         line-height: 30px;
+                        + div {
+                          border-top: 0;
+                        }
                         span {
                           display: inline-block;
                           width: auto;
