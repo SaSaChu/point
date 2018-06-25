@@ -84,12 +84,16 @@ $(function () {
   $('.more').click (function () {
     $(this).remove();
   });
+  $('.fq i:empty').click (function () {
+    $(this).toggleClass('f');
+  });
   $('.pa').each (function () {
-    var j = parseInt(parseInt($(this).data('val'), 10) / 10, 10);
+    var j = parseInt($(this).data('val'), 10);
+    
     var $spans = $(this).next().find('span');
-
-    for(i = 0; i < j; i++)
-      $spans.eq(i).addClass ('a');
+    $spans.css({'width': 'calc(100% * ' + (j / 100) + ')'});
+    // for(i = 0; i < j; i++)
+    //   $spans.eq(i).addClass ('a');
   });
   $('.stars i').click (function () {
     if($(this).parent().data('click'))

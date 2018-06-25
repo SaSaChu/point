@@ -462,23 +462,23 @@ body {
                   height: 100%;
                   background-color: rgba(229, 230, 231, 1.00);
                   + * {
-                    border-left: 1px solid rgba(206, 207, 208, 1.00);
+                    // border-left: 1px solid rgba(206, 207, 208, 1.00);
                   }
                 }
               }
 
               &:nth-child(2) {
-                div span.a {
+                div span {
                   background-color: rgba(251, 61, 0, 1.00)
                 }
               }
               &:nth-child(3) {
-                div span.a {
+                div span {
                   background-color: rgba(11, 201, 223, 1.00)
                 }
               }
               &:nth-child(4) {
-                div span.a {
+                div span {
                   background-color: rgba(20, 218, 133, 1.00)
                 }
               }
@@ -849,6 +849,12 @@ body {
                       border: 1px solid rgba(112, 230, 0, 1.00);
                     }
                   }
+                  &.c {
+                    &:after {
+                      background-color: rgba(255, 0, 0, 1.00);
+                      border: 1px solid rgba(255, 0, 0, 1.00);
+                    }
+                  }
                 }
                 > div {
                   display: inline-block;
@@ -892,6 +898,7 @@ body {
                       > i {
                         &:nth-child(n + 2) {
                           &:before {
+                            cursor: pointer;
                             content: '';
                             display: inline-block;
                             width: 18px;
@@ -920,7 +927,8 @@ body {
                     float: left;
                     display: inline-block;
                     width: 50%;
-                    
+                    border: 1px solid rgba(0, 0, 0, 0);
+
                     + * {
                       text-align: right;
                     }
@@ -939,10 +947,11 @@ body {
                     &:nth-child(2) a {
                       background-color: rgba(61, 4, 132, 1.00);
                       color: white;
-                      @include transition(background-color .3s);
+                      @include transition(opacity .3s);
                       
                       &:hover {
-                        background-color: rgba(122, 7, 221, 1.00);
+                        // background-color: rgba(122, 7, 221, 1.00);
+                        @include opacity(.8);
                       }
                     }
                   }
@@ -1019,6 +1028,10 @@ body {
                         &.b span:after {
                           background-color: rgba(140, 253, 2, 1.00);
                           border: 1px solid rgba(112, 230, 0, 1.00);
+                        }
+                        &.c span:after {
+                          background-color: rgba(255, 0, 0, 1.00);
+                          border: 1px solid rgba(255, 0, 0, 1.00);
                         }
                       }
                     }
@@ -1106,6 +1119,10 @@ body {
                         &.b:after {
                           background-color: rgba(140, 253, 2, 1.00);
                           border: 1px solid rgba(112, 230, 0, 1.00);
+                        }
+                        &.c:after {
+                          background-color: rgba(255, 0, 0, 1.00);
+                          border: 1px solid rgba(255, 0, 0, 1.00);
                         }
                       }
                     }
