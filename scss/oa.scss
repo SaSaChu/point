@@ -345,6 +345,10 @@ body {
                     }
                     &:nth-child(1) {
                       height: 134px - 14px * 2;
+                      figure {
+                        min-width: 100% !important;
+                        min-height: 100% !important;
+                      }
                     }
                     @include range-width(0, 400px) {
                       width: 100px;
@@ -352,7 +356,7 @@ body {
                         width: calc(100% - 100px);
                       }
                     };
-                    div {
+                    > div {
                       color: rgba(22, 24, 28, 1.00);
                       display: inline-block;
                       width: 100%;
