@@ -79,17 +79,28 @@ body {
                 background-color: white;
               }
 
-              &:after {
-                content: '\e986';
-                font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+              button {
+                &:before {
+                  display: inline-block;
+                  content: '\e986';
+                  font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+                }
                 position: absolute;
-                right: 2px;
+                right: 0;
                 text-align: center;
-                top: 2px;
+                top: 14px;
                 display: inline-block;
                 width: 32px;
                 height: 32px;
+                line-height: 32px;
                 color: rgba(205, 206, 207, 1.00);
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+
+                &:focus {
+                  outline: 0;
+                }
 
                 @include range-width(0, 730px) {
                   right: 2px + 16px;
