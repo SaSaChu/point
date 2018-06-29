@@ -84,9 +84,23 @@ $(function () {
   $('.more').click (function () {
     $(this).remove();
   });
-  $('.fq i:empty').click (function () {
-    $(this).toggleClass('f');
+  
+  $('.fq > div:not(:first-child)').each (function (i) {
+    var j = 0;
+    var $that = $(this);
+    $that.find('>*').each(function () {
+      if($(this).is('b')) j++;
+      if ($(this).is('i'))
+      $(this).addClass ('i' + i + j);
+    });
+    
+    $that.find('i').click (function () {
+      var c = $(this).attr('class');
+      $that.find('i.' + c).removeClass('f');
+      $(this).addClass('f');
+    });
   });
+  
   $('.pa').each (function () {
     var j = parseInt($(this).data('val'), 10);
     
@@ -95,6 +109,7 @@ $(function () {
     // for(i = 0; i < j; i++)
     //   $spans.eq(i).addClass ('a');
   });
+
   $('.stars i').click (function () {
     if($(this).parent().data('click'))
       return;
