@@ -85,6 +85,10 @@ $(function () {
     $(this).remove();
   });
   
+  $('.only1').click (function () {
+    if (!$(this).find('input[type="checkbox"]').prop('checked'))
+      return false;
+  });
   $('.fq > div:not(:first-child)').each (function (i) {
     var j = 0;
     var $that = $(this);
