@@ -64,8 +64,6 @@ $(function () {
   });
   $('header .lang_boxs .lang_box>div').click (function () {
     $(this).toggleClass ('a');
-    console.error ('x');
-    
   });
 
   $('.login_boxs .show-pswed').click (function () {
@@ -115,9 +113,7 @@ $(function () {
   });
 
   $('.stars i').click (function () {
-    if($(this).parent().data('click'))
-      return;
-    $(this).parent().data('click', true);
+    $(this).parent().find('i').attr('class', 'icon-star-empty');
     $(this).prevAll().andSelf().attr('class', 'icon-star-full');
   });
 
