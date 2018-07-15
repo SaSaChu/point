@@ -6,6 +6,17 @@
  */
 
 $(function () {
+// ahover
+  var is_iPad = navigator.userAgent.match(/iPad/i) != null;
+  if(is_iPad) {
+    $('header .menu_boxs .menu_box .nav_boxs > div').each (function () {
+      var $that = $(this);
+      $that.click(function () {
+        $that.siblings().removeClass('ahover');
+        $(this).toggleClass('ahover');
+      });
+    });
+  }
 
   // 漢堡變換 + menu滑出
   $(document).ready(function() {

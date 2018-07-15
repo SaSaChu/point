@@ -306,7 +306,7 @@ header {
         }
         > div {
           position: relative;
-          &:hover {
+          &:hover, &.ahover {
             > div {
               display: inline-block;
             }
