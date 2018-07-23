@@ -625,15 +625,17 @@ body {
             > b {
               display: inline-block;
               width: 100%;
-              height: 48px;
-              line-height: 48px;
-              padding-left: 24px;
+              // height: 48px;
+              // line-height: 48px;
+              // padding-left: 24px;
+              padding: 10px 24px;
               @include range-width(0, 730px) {
-                padding-left: 12px;
+                padding: 5px 12px;
+                // padding-left: 12px;
               };
               color: rgba(0, 0, 0, 1.00);
               background-color: rgba(241, 242, 243, 1.00);
-              @include overflow-docx3();
+              // @include overflow-docx3();
             }
             > div {
               display: inline-block;
