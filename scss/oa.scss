@@ -640,8 +640,10 @@ body {
               width: 100%;
               background-color: white;
               padding-left: 24px;
+              padding-right: 24px;
               @include range-width(0, 730px) {
                 padding-left: 12px;
+                padding-right: 12px;
               };
               padding-top: 12px;
               padding-bottom: 32px;
