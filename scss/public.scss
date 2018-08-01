@@ -42,6 +42,25 @@ html {
 }
 
 
+#fl_btn {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  @include border-radius(50px);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999999999;
+  padding: 5px; 
+
+  font-size: 16px;
+  color: white;
+  background-color: rgba(75, 169, 205, 1.00);
+  font-weight: 600;
+  border: 5px solid rgba(0, 133, 222, .5);
+}
+
+
 // d
 img {
   width: 100%;
